@@ -16,16 +16,16 @@
     <section id="sec-0">
         <header class="top">
             <div class="container">
-                <p>1234-5678-9012</p>
-                <p>support@Construct.com</p>
+                <p> <a href="tel:8906512425"> 8906512425</a></p>
+                <p><a href = "mailto: support@Construct.com">support@Construct.com </a></p>
                 <p>Mon-Sat 9:00 am - 7:00 pm</p>
                 <div class="social">
-                    <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
                    <!-- <a href="#"><i class="fa-brands fa-behance"></i></a>
                     <a href="#"><i class="fa-solid fa-basketball"></i></a> -->
-                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="#"><img src="Images/youtube-logotype.png" alt=""></i></a>
+                    <a href="https://in.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <!--<a href="#"><img src="Images/youtube-logotype.png" alt=""></i></a> -->
                 </div>
             </div>
         </header>
@@ -35,8 +35,8 @@
             </div>
             <div class="container">  
                 <h1>
-                    UPASANA<span>
-                    REALCON PRIVATE LIMITED </span>
+                    CONSTRUCTION<span>
+                    COMPANY PRIVATE LIMITED </span>
                     <p>Your Dreams Our Commmitment</p>
                 </h1>
                 <label for="menu"><i class="fas fa-bars"></i></label>
@@ -47,9 +47,10 @@
                     <a href="#">Blog</a> 
                     <a href="#">Portofolio</a> -->
                     <a href="#">Services</a>
-                    <a href="#">Components</a>
-                    <a href="#">About Us</a>
-                    <a href="#">Contact Us</a>
+                    <!-- <a href="#">Components</a> -->
+                    <a href="#">Achievement</a>
+                    <a href="#sec-6">About Us</a>
+                    <a href="#sec-6">Contact Us</a>
                     <a href="#">Career</a>
                     <i class="fa-solid fa-magnifying-glass" id="search"></i>
                 </nav>
@@ -215,14 +216,35 @@
                     <h1>do you have any questions?</h1>
                     <h2>feel free to contact us!</h2>
                 </aside>
-                <form id="form" action="/" method="">
-                    <input type="text" name="name" id="" placeholder="Name" required>
+                <!--<form id="form" action="/" method="">-->
+                    <form onsubmit="sendEmail(); reset();return false;">
+                    <input type="text" name="name" id="name" placeholder="Name" required>
                     <input type="email" name="email" id="email" placeholder="Email" required>
-                    <input type="text" name="message" id="" placeholder="Message" required>
+                    <input type="text" name="message" id="message" placeholder="Message" required>
+                    <!--<textarea id="message" rows="4" placeholder="Message" required></textarea>-->
                     <input type="submit" value="submit" id="submit">
+
                     <p id="msg"></p>
                 </form>
             </div>
+            <script src="https://smtpjs.com/v3/smtp.js"></script>
+            <script>
+                function sendEmail(){
+                    Email.send({
+                        Host : "smtp.gmail.com",
+                        Username : "mithumal.dgr@gmail.com",
+                        Password : "9734475944bu",
+                        To : 'mithumal.dgr@gmail.com',
+                        From : document.getElementById("email").value,
+                        Subject : "New Contact Form Enquiry",
+                        Body : "Name: "+document.getElementById("name").value
+                        +"<br> Email: "+document.getElementById("email").value
+                        +"<br> Message: "+document.getElementById("message").value
+                    }).then(
+                      message => alert("Message Sent Successfully")
+                    );
+                }
+            </script>
         </div>
     </section>
     <section id="sec-6">
@@ -230,23 +252,23 @@
             <div class="about">
                 <h1>About Company</h1>
                 <h2>
-                    UPASANA 
-                    <p>Real con Private Limited</p>
+                    CONSTRUCTION 
+                    <p>Company Private Limited</p>
                 </h2>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus eius nisi repudiandae ipsam pariatur, quos perspiciatis eaque officia rerum odio modi sed fugiat mollitia? Rerum, architecto obcaecati!</p>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>  
-                <a href="#"><i class="fab fa-google-plus-g"></i></a>
-                <a href="#"><i class="fab fa-youtube-square"></i></a>
+                <a href="<https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/"><i class="fab fa-twitter"></i></i></a>
+                <a href="https://in.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>  
+                <a href="https://mail.google.com/mail/"><i class="fab fa-google-plus-g"></i></a>
+                <!--<a href="#"><i class="fab fa-youtube-square"></i></a> -->
             </div>
             <div class="links">
                 <h1>Explor links</h1>
                 <a href="#">Our services</a>
                 <a href="#">Meet our team</a>
-                <a href="#">Forum</a>
+                
                 <a href="#">Help center</a>
-                <a href="#">Contact Us</a>
+                
                 <a href="#">Privacy Policy</a>
                 <a href="#">Our terms</a>
                 <a href="#">Site map</a>
@@ -262,8 +284,10 @@
             <div class="contact">
                 <h1>Contact us</h1>
                 <p>Durgapur, WB</p>
-                <p>Hello@contact-us.com</p>
-                <p>+91 00 00 1234<br>+91 00 00 1234</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117057.11836585075!2d87.23013297212674!3d23.531245372948025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f7710b47a89171%3A0x429e1bdb57e009dd!2sDurgapur%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1676354546591!5m2!1sen!2sin" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <p><a href = "mailto: Hello@contact-us.com">Hello@contact-us.com </a></p>
+                <p>Call Us -<a href="tel:8906512425"> 8906512425</a>.</p>
+                
 
             </div>
         </div>
