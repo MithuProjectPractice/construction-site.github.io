@@ -238,6 +238,11 @@ html {
     background-color: var(--haccent2);
     color: var(--txtaccent);
 }
+
+#sec-0 a {
+        color: #000000;
+        text-decoration: none;
+    }
 /* SECTION ONE */
 #sec-1 {
     background-color: var(--txtaccent);
@@ -708,6 +713,10 @@ text-shadow:1px 1px #73757E;
 #sec-6 .contact p:last-of-type::before{
     content: "\f3cd";
 }
+#sec-6 a {
+    color: #ffffff;
+    text-decoration: none;
+}
 /* SECTION SEVEN */
 #sec-7 {
     background-color: var(--bgaccent);
@@ -721,6 +730,20 @@ text-shadow:1px 1px #73757E;
 #sec-7 p span{
     color: var(--haccent);
 }
+
+/*SECTION EIGHT */
+#sec-8 h1{
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    font-weight: 800;
+}
+#sec-8 p{
+    color: #000;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 0.9rem;
+    
+}
+
 
 /*MEDIA QUERRIES*/
 /*Smart phones */
